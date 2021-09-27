@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc *.c -o factors
+gcc -Wall -Werror -Wextra -pedantic -std=c99 *.c -o factors

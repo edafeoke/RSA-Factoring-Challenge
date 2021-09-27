@@ -47,7 +47,7 @@ int main(int argc, char **argv)
 	FILE *file;
 	long long int n;
 	size_t len = 0;
-	char *e, *line = NULL;
+	char *line = NULL;
 	ssize_t nread;
 
 	if (argc != 2)
@@ -63,7 +63,7 @@ int main(int argc, char **argv)
 	}
 	while ((nread = getline(&line, &len, file)) != -1)
 	{
-		n = strtoll(line, &e, 10);
+		n = atoll(line);
 		print_factor(n);
 	}
 	free(line);
